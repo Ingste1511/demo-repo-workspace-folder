@@ -18,6 +18,10 @@ permissions:
   contents: read
   pull-requests: write
 
+concurrency:
+  group: terraform-modul7-${{ github.ref }}
+  cancel-in-progress: false
+
 defaults:
   run:
     working-directory: modul7
