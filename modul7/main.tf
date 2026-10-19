@@ -24,7 +24,7 @@ resource "azurerm_resource_group" "main" {
   # Tagger gjør det enkelt å finne igjen egne ressurser i et delt abonnement
   tags = {
     student = var.student_id
-    course  = "iac"
+  course  = "iac"
   }
 }
 
