@@ -1,3 +1,4 @@
+
 name: deploy-modul8
 
 on:
@@ -49,4 +50,10 @@ jobs:
           terraform init -reconfigure \
             -backend-config=backend.hcl \
             -backend-config="key=modul8/dev/network.tfstate"
+      - name: Debug working directory
+        run: |
+          pwd
+          ls -la
+          git rev-parse --show-toplevel
+          git ls-files dev.tfvars modul8/dev.tfvars
       - run: terraform apply -auto-approve -var-file="dev.tfvars"
