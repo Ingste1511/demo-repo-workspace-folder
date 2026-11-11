@@ -44,3 +44,5 @@ terraform.rc
 # planout
 !modul7/dev.tfvars
 !modul7/prod.tfvars
+
+modules/**/.terraform.lock.hcl
